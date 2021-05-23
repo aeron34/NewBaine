@@ -26,10 +26,8 @@ app.use(redirectToHTTPS([/localhost:(\d{4})/], [/\/insecure/], 301));
 
 const bodyParser = require('body-parser');
 
-app.get('/', (req, res) => {
-	res.send('donesdas');
-	
-	//res.sendFile(__dirname + '/Site1/index.html');
+app.get('/', (req, res) => {	
+	res.sendFile(__dirname + '/Site1/index.html');
 });
 
 
