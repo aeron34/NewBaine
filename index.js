@@ -27,7 +27,8 @@ app.use(redirectToHTTPS());
 const bodyParser = require('body-parser');
 
 app.get('/', (req, res) => {
-	res.send('done');
+	res.send('donesdas');
+	
 	//res.sendFile(__dirname + '/Site1/index.html');
 });
 
