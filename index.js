@@ -26,7 +26,7 @@ app.use(redirectToHTTPS([/localhost:(\d{4})/], [/\/insecure/], 301));
 
 const bodyParser = require('body-parser');
 
-app.get('/', (req, res) => {	
+app.get('/', (req, res) => {
 	res.sendFile(__dirname + '/Site1/index.html');
 });
 
@@ -97,8 +97,8 @@ app.post('/create-checkout-session', async (req, res) => {
         price_data: {
           currency: 'usd',
           product_data: {
-            name: 'Stubborn Attachments',
-            images: ['https://i.imgur.com/EHyR2nP.png'],
+            name: 'Black Baine Crypto Stragety',
+            images: ['https://cdn.cnn.com/cnnnext/dam/assets/190207141811-01-bitcoin-file-large-169.jpg'],
           },
 					unit_amount: 50
         },
@@ -106,7 +106,7 @@ app.post('/create-checkout-session', async (req, res) => {
       },
     ],
     mode: 'payment',
-    success_url: `https://linxthegame.com/course`,
+    success_url: `http://localhost:3000/aiosdjoiwjaiioW@29010412224121/key`,
     cancel_url: `https://linxthegame.com/`,
   });
 
@@ -148,6 +148,10 @@ app.post('/check_email', express.urlencoded({extended: false}), express.json(),
 
 });
 
+app.get('/aiosdjoiwjaiioW@29010412224121/key', (req, res) => {
+
+  res.sendFile(__dirname + '/buy_page/index.html');
+})
 
 app.get('/course', (req, res) => {
 	//use a knex api call here to check if the
@@ -156,4 +160,4 @@ app.get('/course', (req, res) => {
 	res.sendFile(__dirname + '/courses_page/index.html');
 });
 
-app.listen(process.env.PORT)
+app.listen(3000)
