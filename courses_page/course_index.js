@@ -2,34 +2,42 @@
 
 const submit = document.getElementById('submit');
 
-arr = [];
 
-let names = ['The early days of crytpo',
-'Crypto mining and staking',
-'What gives an asset value',
-'Scarcity',
-'Supply and Demand',
-'Why financial math Is Important',
-'Division And Porportions',
-'Multiplication',
-'Math For Stocks/Crypto',
-'Market cap',
-'Circulating Supply',
-'The price correlation tool',
-'Bear markets',
-'Bull markets',
-'Tools to List Circulating Supply',
-'Find coins with good Social media',
-'Putting It All Together',
-'Good money ratios for investing',
-'Tax information',
-'Invest in multiple coins']
+let arr = [{name:'The early days of crytpo',
+url:'https://res.cloudinary.com/dvdhvay4c/video/upload/v1621835888/movie_p56l1r.mp4'},
+{name:'Crypto mining and staking',
+url: 'https://res.cloudinary.com/dvdhvay4c/video/upload/v1621843501/movie_1_fdirsd.mp4'},
+{name:'What gives an asset value',
+url:'https://res.cloudinary.com/dvdhvay4c/video/upload/v1621843771/movie_2_iljmsl.mp4'},
+{name:'Scarcity',
+url:'https://res.cloudinary.com/dvdhvay4c/video/upload/v1621844009/movie_3_av1bp6.mp4'},
+{name: 'Supply and Demand',
+url:'https://res.cloudinary.com/dvdhvay4c/video/upload/v1621844248/movie_abae3n.mp4'},
+{name: 'Why financial math Is Important',
+url:'https://res.cloudinary.com/dvdhvay4c/video/upload/v1621844337/movie_kyc5zb.mp4'},
+{name: 'Division And Porportions',
+url:'https://res.cloudinary.com/dvdhvay4c/video/upload/v1621844411/movie_sn0u49.mp4'},
+{name: 'Multiplication',
+url:'https://res.cloudinary.com/dvdhvay4c/video/upload/v1621844475/movie_g6b9x4.mp4'},
+{name: 'Math For Stocks/Crypto',
+url: 'https://res.cloudinary.com/dvdhvay4c/video/upload/v1621844598/movie_lotwlb.mp4'},
+{name: 'Market cap',
+url: 'https://res.cloudinary.com/dvdhvay4c/video/upload/v1621844773/movie_nkviuh.mp4'},
+{name: 'Circulating Supply',
+url:'https://res.cloudinary.com/dvdhvay4c/video/upload/v1621844863/movie_nf6yy4.mp4'},
+{name: 'The price correlation tool',
+url:'https://res.cloudinary.com/dvdhvay4c/video/upload/v1621844919/movie_utso5m.mp4'},
+{name: 'Bear markets',
+url: 'https://res.cloudinary.com/dvdhvay4c/video/upload/v1621845501/movie_kmyeoa.mp4'},
+{name:'Bull markets',
+url: 'https://res.cloudinary.com/dvdhvay4c/video/upload/v1621845642/movie_xs7rzf.mp4'},
+{name:'Tools to List Circulating Supply',
+url: 'https://res.cloudinary.com/dvdhvay4c/video/upload/v1621846012/movie_ywjlkb.mp4'},
+{name:'Find coins with good Social media',
+url: 'https://res.cloudinary.com/dvdhvay4c/video/upload/v1621834792/movie_sab9ug.mp4'},
+{name: 'Putting It All Together',
+url: 'https://res.cloudinary.com/dvdhvay4c/video/upload/v1621834622/movie_gnjx0e.mp4'}]
 
-for(let i = 0; i < 17; i++)
-{
-  let n = i + 1;
-  arr.push({name: names[i], url: `${n}/movie.mp4`});
-}
 
 console.log(arr);
 
