@@ -13,7 +13,7 @@ const knx = require('knex')({
   },
 });
 
-const stripe = require('stripe')('sk_test_51Il6lyCfjeYBwRLX7jqukzP0B7jMHPepwozFFlsY9KQh2eC6p3PNHSTj5fXdScskvme1fE1ttIZBITFUd2lQXp8A00IZSbhwLf');
+const stripe = require('stripe')('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');
 
 
 const app = express();
