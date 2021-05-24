@@ -100,7 +100,7 @@ app.post('/create-checkout-session', async (req, res) => {
             name: 'Black Baine Crypto Stragety',
             images: ['https://cdn.cnn.com/cnnnext/dam/assets/190207141811-01-bitcoin-file-large-169.jpg'],
           },
-					unit_amount: 50
+					unit_amount: 20000
         },
         quantity: 1
       },
