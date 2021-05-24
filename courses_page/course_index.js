@@ -41,7 +41,7 @@ if(good)
 
 } else {
   setTimeout(function() {
-    window.location.replace("http://localhost:3000/")
+    window.location.replace("https://www.linxthegame.com/")
   }, 10000)
 }
 
