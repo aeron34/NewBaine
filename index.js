@@ -106,8 +106,8 @@ app.post('/create-checkout-session', async (req, res) => {
       },
     ],
     mode: 'payment',
-    success_url: `https://linxthegame.com/aiosdjoiwjaiioW@29010412224121/key`,
-    cancel_url: `https://linxthegame.com/`,
+    success_url: `https://www.linxthegame.com/aiosdjoiwjaiioW@29010412224121/key`,
+    cancel_url: `https://www.linxthegame.com/`,
   });
 
 	res.json({id: session.id})
