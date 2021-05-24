@@ -106,7 +106,7 @@ app.post('/create-checkout-session', async (req, res) => {
       },
     ],
     mode: 'payment',
-    success_url: `http://localhost:3000/aiosdjoiwjaiioW@29010412224121/key`,
+    success_url: `https://linxthegame.com/aiosdjoiwjaiioW@29010412224121/key`,
     cancel_url: `https://linxthegame.com/`,
   });
 
