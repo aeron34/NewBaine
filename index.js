@@ -97,7 +97,7 @@ app.post('/create-checkout-session', async (req, res) => {
         price_data: {
           currency: 'usd',
           product_data: {
-            name: 'Black Baine Crypto Stragety',
+            name: 'Black Baine Crypto Stragety Course',
             images: ['https://cdn.cnn.com/cnnnext/dam/assets/190207141811-01-bitcoin-file-large-169.jpg'],
           },
 					unit_amount: 2000
