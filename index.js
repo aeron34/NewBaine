@@ -22,7 +22,12 @@ app.use(express.static('Site1'));
 app.use(express.static('login_page'));
 app.use(express.static('courses_page'));
 app.use(express.static('content'));
-app.use(redirectToHTTPS([/localhost:(\d{4})/], [/\/insecure/], 301));
+
+var redirector = require("redirect-https")({
+    body: "<!-- Hello Developer! Please use HTTPS instead: {{ URL }} -->"
+});
+ 
+app.use("/", redirector);
 
 const bodyParser = require('body-parser');
 
