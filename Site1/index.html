@@ -32,9 +32,22 @@
 <script>
   gtag('event', 'conversion', {'send_to': 'AW-394584049/zoxtCIqug68CEPG_k7wB'});
 </script>
-<!-- Event snippet for Begin checkout conversion page -->
+
+<!-- Event snippet for Begin checkoutj conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
 <script>
-  gtag('event', 'conversion', {'send_to': 'AW-394584049/qma2CMeQhq8CEPG_k7wB'});
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-394584049/uMmTCIyyhq8CEPG_k7wB',
+      'event_callback': callback
+  });
+  return false;
+}
 </script>
 
 
@@ -149,8 +162,9 @@ src="https://www.facebook.com/tr?id=475218143694051&ev=PageView&noscript=1"
           // Create an instance of the Stripe object with your publishable API key
           var stripe = Stripe("pk_live_51Il6lyCfjeYBwRLX2eMp9lr7P3sWhKJN0WVM94grSqVqRhWnodzzUmzhShz070INKcr4Plxmtk7FSXUplbRap3R200arYHblUK");
           var checkoutButton = document.getElementById("checkout");
-
+		gtag_report_conversion();
           checkoutButton.addEventListener("click", function () {
+		
             fetch("/create-checkout-session", {
               method: "POST",
             })
