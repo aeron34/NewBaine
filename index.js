@@ -13,7 +13,9 @@ const knx = require('knex')({
   },
 });
 
-const stripe = require('stripe')('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');
+const stripe = require('stripe')('sk_test_51Il6lyCfjeYBwRLX7jqukzP0B7jMHPepwozFFlsY9KQh2eC6p3PNHSTj5fXdScskvme1fE1ttIZBITFUd2lQXp8A00IZSbhwLf');
+
+//live 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
 
 
 const app = express();
@@ -22,25 +24,7 @@ app.use(express.static('Site1'));
 app.use(express.static('login_page'));
 app.use(express.static('courses_page'));
 app.use(express.static('content'));
-
-app.use((req, res, next) => {
-    if (process.env.NODE_ENV === 'production') {
-        if (req.headers.host === 'your-app.herokuapp.com')
-	{
-	return res.redirect(301, 'https://www.your-custom-domain.com');
-    	}
-        if (req.headers['x-forwarded-proto'] !== 'https')
-	{
-            return res.redirect('https://' + req.headers.host + req.url);
-	}
-        else
-	{
-            return next();
-    	}
-    } else {
-        return next();
-    }
-});
+app.use(redirectToHTTPS([/localhost:(\d{4})/], [/\/insecure/], 301));
 
 const bodyParser = require('body-parser');
 
@@ -115,10 +99,10 @@ app.post('/create-checkout-session', async (req, res) => {
         price_data: {
           currency: 'usd',
           product_data: {
-            name: 'Black Baine Crypto Stragety Course',
-            images: ['https://cdn.cnn.com/cnnnext/dam/assets/190207141811-01-bitcoin-file-large-169.jpg'],
+            name: 'Baine Fitness Program Bundle With Crypto Course',
+            images: ['https://img.mensxp.com/media/content/2019/Jan/31-days-of-fitness-1400x653-1546841617.jpg?w=820&h=540&cc=1'],
           },
-					unit_amount: 2000
+					unit_amount: 3000
         },
         quantity: 1
       },
@@ -178,4 +162,4 @@ app.get('/course', (req, res) => {
 	res.sendFile(__dirname + '/courses_page/index.html');
 });
 
-app.listen(process.env.PORT)
+app.listen(3000)
