@@ -1,0 +1,55 @@
+.link {
+  font-family: Lobster;
+  display !important;
+  margin: 10px;
+  font-size: 20px;.
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid blue;
+  background-color: black;
+  color: white;
+  width: 30%;
+  margin: 2%;
+}
+
+button {
+  border:none;
+  border-bottom: 1px solid red;
+  background-color: black;
+  margin: 2%;
+}
+
+.input_box {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8%;
+  margin-bottom: 8%;
+}
+
+input:hover {
+  text-decoration: none;
+}
+
+textarea {
+    background-color: black;
+    border: none;
+    margin: 2%;
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+button:hover
+{
+  opacity: 0.5;
+}
