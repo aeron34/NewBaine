@@ -140,6 +140,7 @@ src="https://www.facebook.com/tr?id=475218143694051&ev=PageView&noscript=1"
           </div>
         </div>
     </section>
+    <button id='LOOP'>OOPS</button>
 
  <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TMCL9DR"
@@ -155,7 +156,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               // Create an instance of the Stripe object with your publishable API key
               var stripe = Stripe("pk_test_51Il6lyCfjeYBwRLX2nl7vf3755qaLMDSLJus42Oi8N4ygjmZiJ2KItpHQq8lAh5b8ymajdoF5DQoz3MFLvTL97uL00t04YgYzW");
               var checkoutButton = document.getElementById("checkout");
+              var oh = document.getElementById("LOOP");
 
+              oh.addEventListener("click", function () {
+                 gtag_report_conversion();
+              })
+		    
               checkoutButton.addEventListener("click", function () {
                 fetch("/create-checkout-session", {
                   method: "POST",
