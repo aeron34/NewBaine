@@ -162,4 +162,4 @@ app.get('/course', (req, res) => {
 	res.sendFile(__dirname + '/courses_page/index.html');
 });
 
-app.listen(3000)
+app.listen(process.env.PORT)
